@@ -1,0 +1,88 @@
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-container {
+  margin: auto;
+  width: 80%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.header {
+   background-color: #0277bd;
+// background-color: palevioletred;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+.values{
+   font-size: 15px;
+   font-weight: 500; 
+}
+// .table{
+//     border-right: 5px solid black;
+// }
+.mat-header-row th.mat-header-cell:first-child {
+  border-right: 2px solid #ccc; /* Vertical line between FIELD and VALUE */
+}
+
+.mat-row td.mat-cell:first-child {
+  border-right: 2px solid #ccc; /* Also apply to data cells for consistency */
+}
+/* Add left space to the VALUE column header */
+.mat-header-row th.mat-header-cell:nth-child(2) {
+  padding-left: 16px; /* You can increase/decrease as needed */
+}
+
+/* Optional: Add left space to VALUE column cells for consistency */
+.mat-row td.mat-cell:nth-child(2) {
+  padding-left: 16px;
+}
+// .striped-table tr:nth-child(even) td {
+//   background-color: #f5f5f5;
+// }
+
+// .striped-table tr:nth-child(odd) td {
+//   background-color: orange;
+// }
+
+// .striped-table th {
+//   background-color: #007bff;
+//   color: white;
+// }
+
+.mat-row:nth-child(even) .mat-cell {
+  background-color: #f9f9f9;
+}
+
+.mat-row:nth-child(odd) .mat-cell {
+  background-color: #ffffff;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}

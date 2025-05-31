@@ -1,0 +1,22 @@
+  
+
+  <!-- {{postObj | json}} -->
+
+  <mat-card class="mb-4 mat-elevation-z7">
+    <mat-card-header>
+        <mat-card-title>
+            {{postObj.name}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        {{postObj.GstNo}}
+        {{postObj.PanNo}}
+    </mat-card-content>
+    <mat-card-actions>
+        <!-- <button mat-raised-button color="primary">Edit</button>
+        <button mat-raised-button color="accent">Remove</button> -->
+        <button 
+        routerLink="view"
+        mat-raised-button color="primary">View Details</button>
+    </mat-card-actions>
+  </mat-card>

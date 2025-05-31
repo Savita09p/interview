@@ -1,0 +1,22 @@
+
+
+   .actions-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.custom-sidenav {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+// .custom-sidenav {
+//   width: 200px;
+//   background-color: #f5f5f5; /* Light gray background */
+// }
+mat-list-item{
+mat-icon {
+  font-size: 24px;
+  color:black; /* Indigo color */
+}
+}
