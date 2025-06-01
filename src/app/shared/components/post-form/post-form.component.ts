@@ -27,14 +27,14 @@ export class PostFormComponent implements OnInit {
       code : new FormControl(null,[Validators.required]),
       email: new FormControl(null,[Validators.required]),
       mobileNo:new FormControl(null,[Validators.required]),
-      gstNo :new FormControl(null,[Validators.required]),
-      panNo :new FormControl(null,[Validators.required]),
-      adress : new FormGroup({
-     country: new FormControl('', Validators.required),
-     city: new FormControl('', Validators.required),
-     pincode: new FormControl('', [Validators.required]),
-     state: new FormControl('', Validators.required),
-  }),
+      GstNo :new FormControl(null,[Validators.required]),
+      PanNo :new FormControl(null,[Validators.required]),
+      Address : new FormGroup(null,[Validators.required]),
+     Country: new FormControl('', Validators.required),
+     City: new FormControl('', Validators.required),
+     PinCode: new FormControl('', [Validators.required]),
+     State: new FormControl('', Validators.required),
+  
     })
   }
 
@@ -42,13 +42,13 @@ export class PostFormComponent implements OnInit {
 onPostForm(){
   if(this.postForm.valid){
         let postObj : Ipost = this.postForm.value;
-        console.log(postObj)
+        // console.log(postObj)
         this.postForm.reset();
          this._postsServce.createBlogPost(postObj)
           .subscribe({
             next:(res) =>{
                this._matRef.close({...postObj,id: res.name})
-                console.log(res)
+                // console.log(res)
             },
             error:(err)=>{
               console.log(err)

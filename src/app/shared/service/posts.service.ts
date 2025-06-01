@@ -10,7 +10,7 @@ import { UuidService } from './uuid.service';
 })
 export class PostsService {
   BASE_URL : string =`${environment.baseUrl}`
-  POSTS_URL : string =`${this.BASE_URL}/client.json`
+  POSTS_URL : string =`${this.BASE_URL}/clients.json`
   constructor(
     private _http : HttpClient,
     private _uuidService : UuidService
@@ -22,7 +22,7 @@ export class PostsService {
                      map(data =>{
                       let postsArr : Array<Ipost> = []
                       for (const key in data){
-                         postsArr.push({...data[key],id :key})
+                         postsArr.push({...data[key]})
                       }
                       return postsArr
                      })

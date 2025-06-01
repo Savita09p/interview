@@ -18,6 +18,10 @@ const routes: Routes = [
  {
   path:'view',
   component:ClientDetailsComponent
+ },
+ {
+  path :'view/edit',
+  component:PostFormComponent
  }
 ];
 

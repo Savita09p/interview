@@ -31,6 +31,12 @@ export class PostDashboardComponent implements OnInit {
 
     dialogConfig.disableClose= true;
     dialogConfig.width= '600px';
-    let matDialog = this._matDialog.open(PostFormComponent)
+    let matDialog = this._matDialog.open(PostFormComponent);
+    matDialog.afterClosed().subscribe(res => {
+      if(res){
+        this.postsData.push(res);
+        console.log(res)
+      }
+    })
   }
 }

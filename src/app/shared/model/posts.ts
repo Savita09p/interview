@@ -1,20 +1,17 @@
 
 export interface Ipost {
-      GstNo : string;
+      Address : string;
+      City:string;
+      Country:string;
+      GstNo:string;
       PanNo:string;
-      adress:{
-       Country:string;
-       city:string;
-       pincode:string;
-       state:string;
-      },
+      PinCode:string;
+      State:string;
       client:string;
       code:string;
-      contact:string;
       email:string;
-      gender:string;
+      mobileNo:string;
       name:string;
-      id:string;
     }
 
       
